@@ -19,7 +19,8 @@ p {
 	font-weight:100;
 }
 
-/* GRID */
+ /* GRID */
+
  .container {
    margin-right: auto;
    margin-left: auto;
@@ -42,14 +43,60 @@ p {
    min-height: 1px;
    margin:0 2% 20px;
  }
- 
 
- @media (min-width: 768px) {
+ /* MEDIA QUERIES */
+ @media (min-width: 20px) and (max-width: 768px) {
+    header nav img {
+      width:100px;
+    }
+    .right-sign-div {
+      position: absolute;
+      margin-right: 0px;
+    }
+    .pricing .box {
+      margin-top: 0px;
+    }
+    footer div .logo {
+      margin-top: -7px;
+      float: right;
+      width: 100px;
+    }
+    footer .copyright-block {
+      text-align: left;
+      position: absolute;
+      width: 400px;
+      margin-top: 105px;
+    }
+    footer nav {
+      text-align: center;
+    }
+
+ }
+
+ @media (min-width: 769px) and (max-width: 992px) {
    .container {
      width: 750px;
    }
+   .right-sign-div {
+      position: absolute;
+      margin-right: 0px;
+    }
+    .pricing .box {
+      margin: 0px;
+    }
+      footer div .logo {
+      margin-top: -7px;
+      float: right;
+      width: 100px;
+    }
+    footer .copyright-block {
+      text-align: left;
+      position: absolute;
+      margin-top: 100px;
+      
+    }
  }
- @media (min-width: 992px) {
+ @media (min-width: 993px) {
    .container {
      width: 970px;
    }
@@ -61,11 +108,25 @@ p {
    }
    .one-fourth {
      width:21%;
-   }
+  }
+    footer nav ul li {
+    font-size: smaller;
+  }
  }
  @media (min-width: 1200px) {
    .container {
      width: 1170px;
+   }
+    footer nav ul li {
+    font-size: 14px;
+  }
+ }
+ @media screen (min-width: 1920px) {
+   .container {
+      width: 1400px;
+   }
+   header div h1.bigtext {
+      font-size:60px;
    }
  }
  
@@ -95,6 +156,7 @@ header nav {
    padding:10px 15px;
    border:2px solid #FFFFFF;
    border-radius: 4px;
+   background:rgba(255, 255, 255, 0.3);
  }
  header nav ul > li.btn-outline:hover {
    background:#FFFFFF;
@@ -114,7 +176,7 @@ header nav {
  header .hero h1 {
    font-size:48px;
    font-weight: normal;
-   margin:40px 0 0;
+   margin:95px 0 0;
  }
  header .hero p {
    font-size: 22px;
@@ -236,6 +298,12 @@ header nav {
    margin-bottom:20px;
    font-weight: 100;
  }
+ .box .btn {
+   position:absolute;
+   bottom:20px;
+   left:20px;
+   right:20px;
+ }
 .small {
    font-size: 12px;
    color: #FEFEFE;
@@ -252,6 +320,9 @@ header nav {
  }
  .testimonials ul li {
    list-style-type: none;
+ }
+ .testimonials ul li:nth-child(even) {
+   margin-top: 30px;
  }
  .testimonials blockquote {
    color:#FFFFFF;
@@ -360,7 +431,7 @@ footer p, footer nav ul {
  }
   footer .logo{
    padding: 2.35em 0;
-   margin: -2em auto;
+   margin: 0 auto;
    display: block;
  }
 
@@ -373,14 +444,15 @@ footer p, footer nav ul {
      height: 100px;
    }
     footer p, footer nav ul{
-     padding: -2em 0;
+     padding: 2em 0;
      text-align: left;
    }
     footer .right-footer-block {
      background-color: transparent;
    }
     footer .logo{
-     padding: 2em 0 2em 1.5em;
+     padding: 15px;
+        height: 65px;
    }
  }
 
@@ -392,13 +464,12 @@ footer p, footer nav ul {
    background:#F7F7F7;
  }
  .left-nav {
-  height:100vh;
-  width:14.66666%;
+  height:100%;
+  width:280px;
   color:#ffffff;
   background: #34495E;
    background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
    float:left;
-   position: fixed;
    position:absolute;
    display:block;
    -webkit-transition: all 0.3s ease-in-out;
@@ -505,6 +576,10 @@ footer p, footer nav ul {
 }
 
  /* LEFT NAVBAR SETTINGS */
+  .active {
+   background-color: #34495E;
+   padding: 3px;
+ }
  .left-nav .settings {
    position:absolute;
    background:#22303E;
@@ -537,6 +612,14 @@ footer p, footer nav ul {
    margin-top:8px;
  }
 
+.settings-btn {
+  margin-top: 0px !important;
+}
+.dropit-inverse .dropit-submenu li a {
+  text-align: left;
+  font-size: 16px;
+  float: none;
+}
 
 
  /* CONTENT */
